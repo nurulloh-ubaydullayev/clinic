@@ -1,0 +1,26 @@
+.header {
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__nav {
+  width: 100%;
+  max-width: 500px;
+}
+
+.header_nav-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.header__link {
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #1f1534b9;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="public/styles/style.css" />
+    <link rel="stylesheet" href="public/styles/profile.css" />
+    <title>Profile</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .profile {
+        padding: 20px;
+        background-color: #c494f1;
+        color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .profile-name {
+        padding: 10px;
+        padding-left: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        border-bottom: 1px solid #000;
+      }
+
+      p {
+        padding: 10px 20px;
+        background-color: rgb(120, 120, 21);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+
+      select {
+        width: 30%;
+        margin-bottom: 20px;
+        padding: 10px;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+      }
+
+      button {
+        width: 30%;
+        padding: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="profile">Profile</h1>
+    <h2 class="profile-name"><%= data.name %></h2>
+
+    <p>Time: <%= userOrder.time %></p>
+    <p>Doctor: <%= userOrder.doctor %></p>
+
+    <form action="/edit/<%= userOrder.id %>" method="post">
+      <select name="doctor">
+        <% doctors.forEach(item => { %>
+        <option value="<%= item %>"><%= item %></option>
+        <% }) %>
+      </select>
+
+      <select name="time">
+        <% filteredTimes.forEach(item => { %>
+        <option value="<%= item.time %>"><%= item.time %></option>
+        <% }) %>
+      </select>
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

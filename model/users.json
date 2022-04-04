@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "nurulloh",
+        "login": "nurulloh-pro",
+        "password": "abcd12345",
+        "phone": "+999999999999",
+        "admin": true
+    },
+    {
+        "id": 2,
+        "name": "Abdulloh",
+        "login": "abdulloh_pro",
+        "password": "abc123",
+        "phone": "+998990066666",
+        "admin": false
+    },
+    {
+        "id": 3,
+        "name": "kimdir",
+        "login": "kimdir",
+        "password": "kimdir123",
+        "phone": "998996666666",
+        "admin": false
+    }
+]

@@ -1,0 +1,79 @@
+.profile {
+  padding: 20px;
+  background-color: rgb(235, 187, 187);
+  font-size: 26px;
+}
+
+.profile-name {
+  padding: 20px;
+  color: coral;
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form select,
+.form button {
+  width: 200px;
+  margin: 20px;
+  padding: 5px;
+  text-align: center;
+}
+
+.orders {
+}
+
+.orders-list {
+  list-style: none;
+}
+
+.orders-list li {
+  padding: 20px 50px;
+  background-color: rgb(189, 209, 231);
+  border-bottom: 1px solid #333;
+}
+
+.edit-link {
+  padding: 5px;
+  text-decoration: none;
+  color: slateblue;
+}
+
+.delete-btn {
+  padding: 5px 10px;
+}
+
+.edit-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.edit-form input,
+.edit-form button {
+  margin: 20px;
+  padding: 10px;
+}
+
+.submit__btn {
+  width: 20% !important;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 15px !important;
+  border: none;
+  background-color: rgb(124, 101, 224);
+  color: #fff;
+}
+
+select {
+  width: 20% !important;
+  border: 2px solid rgb(29, 18, 112);
+  background-color: transparent;
+  font-size: 20px;
+  font-family: sans-serif;
+}

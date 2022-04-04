@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="public/styles/style.css" />
+    <link rel="stylesheet" href="public/styles/header.css" />
+    <link rel="stylesheet" href="public/styles/profile.css" />
+    <title>Profile</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .signup .container {
+        text-align: center;
+      }
+
+      .signup__form {
+        width: 60%;
+        max-width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .signup__input {
+        width: 100%;
+        margin: 20px;
+        padding: 20px !important;
+        background-color: #fff;
+        border: none;
+        border-bottom: 2px solid rgb(57, 71, 151);
+        box-sizing: border-box;
+      }
+
+      .signup__warn {
+        color: rgb(61, 65, 65);
+      }
+
+      .submit__btn {
+        width: 60%;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        margin-left: 60px !important;
+        padding: 15px;
+        border: none;
+        background-color: rgb(124, 101, 224);
+        color: #fff;
+      }
+
+      label {
+        width: 60%;
+      }
+
+      label p {
+        padding-left: 20px;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <a class="header__logo" href="/">
+        <img
+          class="header__logo-img"
+          src="public/images/logo.png"
+          alt="Logo"
+          width="160"
+          height="40"
+        />
+      </a>
+
+      <nav class="header__nav">
+        <ul class="header_nav-list">
+          <li class="header__list-item">
+            <a class="header__link" href="/"> Home </a>
+          </li>
+
+          <li class="header__list-item">
+            <a class="header__link" href="/signup"> Sign up </a>
+          </li>
+
+          <li class="header__list-item">
+            <a class="header__link" href="/login"> Log in </a>
+          </li>
+
+          <li class="header__list-item">
+            <a class="header__link" href="/profile"> Profile </a>
+          </li>
+
+          <li class="header__list-item">
+            <a class="header__link" href="/edit">Edit username</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <h1 class="profile">Profile</h1>
+    <h2 class="profile-name"><%= data.name %></h2>
+
+    <form class="edit-form signup__form">
+      <label>
+        <p>Profile name:</p>
+        <input
+          class="signup__input"
+          type="text"
+          name="username"
+          placeholder="Change your username"
+          value="<%= data.name %>"
+          minlength="4"
+        />
+      </label>
+
+      <label>
+        <p>Profile login:</p>
+        <input
+          class="signup__input"
+          type="text"
+          name="login"
+          placeholder="Change your login"
+          value="<%= data.login %>"
+          minlength="6"
+        />
+      </label>
+
+      <label>
+        <p>Profile password:</p>
+        <input
+          type="text"
+          class="signup__input"
+          name="password"
+          placeholder="Change your password"
+          value="<%= data.password %>"
+          minlength="8"
+        />
+      </label>
+
+      <button class="submit__btn" type="submit">Submit</button>
+    </form>
+
+    <script>
+      const elForm = document.querySelector(".signup__form");
+      elForm.addEventListener("submit", (evt) => {
+        evt.preventDefault();
+
+        fetch("/edit", {
+          method: "PUT",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            username: evt.target.childNodes[1].children[1].value,
+            login: evt.target.childNodes[3].children[1].value,
+            password: evt.target.childNodes[5].children[1].value,
+          }),
+        }).then((window.location.href = "/profile"));
+      });
+    </script>
+  </body>
+</html>

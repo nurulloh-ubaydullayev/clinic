@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="public/styles/style.css" />
+    <link rel="stylesheet" href="public/styles/header.css" />
+    <link rel="stylesheet" href="public/styles/signup.css" />
+    <title>Signup</title>
+  </head>
+  <body>
+    <header class="header">
+      <a class="header__logo" href="/">
+        <img
+          class="header__logo-img"
+          src="public/images/logo.png"
+          alt="Logo"
+          width="160"
+          height="40"
+        />
+      </a>
+
+      <nav class="header__nav">
+        <ul class="header_nav-list">
+          <li class="header__list-item">
+            <a class="header__link" href="/"> Home </a>
+          </li>
+
+          <li class="header__list-item">
+            <a class="header__link" href="/signup"> Sign up </a>
+          </li>
+
+          <li class="header__list-item">
+            <a class="header__link" href="/login"> Log in </a>
+          </li>
+
+          <li class="header__list-item">
+            <a class="header__link" href="/profile"> Profile </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="signup">
+        <div class="container">
+          <h2>Sign Up</h2>
+          <form class="signup__form" action="/signup" method="post">
+            <input
+              class="signup__input"
+              type="text"
+              placeholder="Your name..."
+              minlength="4"
+              maxlength="24"
+              name="name"
+              required
+            />
+            <input
+              class="signup__input"
+              type="text"
+              placeholder="Login..."
+              minlength="6"
+              maxlength="30"
+              name="login"
+              required
+            />
+            <input
+              class="signup__input"
+              type="password"
+              placeholder="Password..."
+              minlength="8"
+              name="password"
+              required
+            />
+            <input
+              class="signup__input"
+              type="tel"
+              placeholder="Phone number..."
+              name="phone"
+              pattern="^(?:\d{10,12}|\+\d{10,12}|\w+@\w+\.\w{2,4})$"
+              minlength="9"
+              maxlength="14"
+              required
+            />
+            <button class="submit__btn" type="submit">Submit</button>
+          </form>
+
+          <h3></h3>
+
+          <h3 class="signup__warn">
+            If you have already account, please go to
+            <a href="/login">Log in</a>
+          </h3>
+        </div>
+      </div>
+    </main>
+
+    <!-- <script>
+      const elForm = document.querySelector(".signup__form");
+
+      elForm.addEventListener("submit", (evt) => {
+        console.log(evt);
+        evt.target.preventDefault();
+      });
+    </script> -->
+  </body>
+</html>

@@ -1,0 +1,102 @@
+[
+    {
+        "time": "9:00",
+        "isActive": false
+    },
+    {
+        "time": "9:15",
+        "isActive": false
+    },
+    {
+        "time": "9:30",
+        "isActive": false
+    },
+    {
+        "time": "9:45",
+        "isActive": false
+    },
+    {
+        "time": "10:00",
+        "isActive": false
+    },
+    {
+        "time": "10:15",
+        "isActive": false
+    },
+    {
+        "time": "10:30",
+        "isActive": false
+    },
+    {
+        "time": "10:45",
+        "isActive": false
+    },
+    {
+        "time": "11:00",
+        "isActive": false
+    },
+    {
+        "time": "11:15",
+        "isActive": false
+    },
+    {
+        "time": "11:30",
+        "isActive": false
+    },
+    {
+        "time": "11:30",
+        "isActive": false
+    },
+    {
+        "time": "11:45",
+        "isActive": false
+    },
+    {
+        "time": "14:00",
+        "isActive": false
+    },
+    {
+        "time": "14:15",
+        "isActive": false
+    },
+    {
+        "time": "14:30",
+        "isActive": false
+    },
+    {
+        "time": "14:45",
+        "isActive": false
+    },
+    {
+        "time": "15:00",
+        "isActive": false
+    },
+    {
+        "time": "15:15",
+        "isActive": false
+    },
+    {
+        "time": "15:30",
+        "isActive": false
+    },
+    {
+        "time": "15:45",
+        "isActive": false
+    },
+    {
+        "time": "16:00",
+        "isActive": false
+    },
+    {
+        "time": "16:15",
+        "isActive": false
+    },
+    {
+        "time": "16:30",
+        "isActive": false
+    },
+    {
+        "time": "16:45",
+        "isActive": false
+    }
+]
